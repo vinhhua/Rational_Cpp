@@ -1,0 +1,59 @@
+Homework 1: Rational Numbers
+
+Total: 20 points
+
+
+Write a class Rational to represent rational numbers.
+
+A sample test file hw1.rational.test.cc is given in Files.
+
+
+1.  [2 points] Your class should have private member variables for the numerator and denominator.
+
+
+2. [2 points] Your class should have two constructors; one that takes no arguments, and one that takes two arguments.
+
+
+3. [4 points] Write a Getter (Accessor) and Setter (Mutator) for each of the member variables. Perform error checking for denominator Setter.
+
+
+4. [1 point] Add a public member function to your class:
+
+void Print();
+
+If numerator is 5 and denominator is 8, it should print “5/8".
+
+
+5. [4 points] Add a public member function to your class:
+
+void Reduce();
+
+A member function that puts the rational into its most reduced form.  For instance, it would change 24/36 to 2/3.
+
+
+6. [2 points] Implement += as a member function (you are NOT required to reduce your fraction).
+
+void operator +=(const Rational& rhs);
+
+Modifies the Rational it is called on to add rhs.
+
+
+7. [1 point] Implement * operator as a non-member function. You are NOT required to reduce your fraction.
+
+Rational operator *(const Rational& lhs, const Rational& rhs);
+
+Returns a new Rational that is the product of the two Rationals passed in.
+
+
+8. [2 points] Implement + operator as a non-member function. You are NOT required to reduce your fraction.
+
+Rational operator +(const Rational& lhs, const Rational& rhs);
+
+Returns a new Rational that is the sum of the two Rationals passed in.
+
+
+9. [2 points] Implement == operator as a non-member function.
+
+bool operator ==(const Rational& lhs, const Rational& rhs);
+
+Returns true if a==b and false if not.  Note; if a is 6/8 and b is 3/4, it should return true.
